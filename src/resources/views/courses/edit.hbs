@@ -1,0 +1,20 @@
+<div class="mt-4 mb-4">
+    <h3 class="text-center">--Chỉnh sửa khóa học--</h3>
+    {{#each course}}
+    <form method="POST" action="/courses/{{this.id}}">
+        <div class="form-group">
+            <label for="name">Tên khóa học</label>
+            <input type="text" id="name" name="name" value="{{this.name}}" class="form-control" placeholder="Nhập tên khóa học">
+        </div>
+        <div class="form-group">
+            <label for="description">Mô tả khóa học</label>
+            <textarea id="description" name="description" class="form-control" placeholder="Nhập mô tả cho khóa học">{{this.description}}</textarea>
+        </div>
+        <div class="form-group">
+            <label for="videoId">Video ID</label>
+            <input type="text" id="videoId" name="videoId" value="{{this.videoId}}" class="form-control" placeholder="Nhập Video Id">
+        </div>
+        <button type="submit" class="btn btn-primary">Lưu lại</button>
+    </form>
+    {{/each}}
+</div>
